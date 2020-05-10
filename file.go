@@ -11,7 +11,7 @@ func newFile(name string) error {
 	mkDir(dataDir())
 
 	// Open file with vim
-	cmd := exec.Command("vim", dataDir()+"/"+name)
+	cmd := exec.Command("micro", dataDir()+"/"+name)
 	cmd.Stdin = os.Stdin
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
